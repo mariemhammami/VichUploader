@@ -1,0 +1,19 @@
+easy_admin:
+    entities:
+        Image:
+            class:  App\Entity\Image
+            list:
+                fields:
+                    - 'id'
+                    - { property: 'image_name', type: 'image', label: 'Image', base_path: '/image'}
+                    - 'title'
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image', label: 'Image' }
+                    - 'title'
+            show:
+                fields:
+                    - { property: 'image_name', type: 'image', label: 'Image', base_path: '/image' }
+                    - 'title'
+
+
